@@ -1,0 +1,62 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/home/user/Documents/projects/NFTcontract/contracts/NFTContract.sol": {
+      "lastModificationDate": 1661927181726,
+      "contentHash": "d228760a8680132bc238cf726370f802",
+      "sourceName": "contracts/NFTContract.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.1",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.14"
+      ],
+      "artifacts": [
+        "Address",
+        "Context",
+        "ERC165",
+        "ERC721",
+        "ERC721URIStorage",
+        "IERC165",
+        "IERC721",
+        "IERC721Metadata",
+        "IERC721Receiver",
+        "NFTcontract",
+        "Ownable",
+        "Strings"
+      ]
+    }
+  }
+}
