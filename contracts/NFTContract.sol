@@ -1207,15 +1207,32 @@ pragma solidity ^0.8.14;
 
 contract NFTcontract is ERC721URIStorage,Ownable{
 
-    constructor(string memory _name, string memory _symbol) ERC721(_name, _symbol){
+    address private admin; 
+    struct tokenInfo{
+        bool minted;
+        address owner;
+    }
+    
+    mapping(uint256 => tokenInfo) info;
+
+    modifier onlyAdmin{
+        require(msg.sender == admin,"Caller is not the admin");
+        _;
+
+    }
+
+    constructor(string memory _name, string memory _symbol,address _admin)ERC721(_name, _symbol) {
+        admin = _admin;
         
     }
 
-    function safeMint(address to, uint256 tokenId, string memory uri)
+    function safeMint(address to, uint256 tokenId, string memory uri) onlyOwner
         external  
     {
+
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, uri);
+        info[tokenId] = tokenInfo(true,to);
     }
 
     function burn(uint256 _tokenID) external onlyOwner
@@ -1228,8 +1245,23 @@ contract NFTcontract is ERC721URIStorage,Ownable{
         return super.tokenURI(_tokenID);
     }
 
-    function setTokenURI(uint256 _tokenID,string memory _URI) external onlyOwner
+    function setTokenURI(uint256 _tokenID,string memory _URI) external
     {
+        require(msg.sender == admin || msg.sender == ownerOf(_tokenID),"Caller is not the admin nor the owner of token");
         _setTokenURI(_tokenID,_URI);
     }
+
+    function transferFrom(address _from, address _to,uint256 _tokenID) public override(ERC721) onlyAdmin {
+        _transfer(_from, _to, _tokenID);
+        
+    }
+
+    function safeTransferFrom(address _from, address _to, uint256 _tokenId) public  override(ERC721) onlyAdmin {
+        safeTransferFrom(_from, _to, _tokenId);
+    }
+
+    function safeTransferFrom(address _from, address _to, uint256 _tokenId, bytes memory data) public override onlyAdmin{
+        safeTransferFrom(_from, _to, _tokenId, data);
+    }
+    
 }
