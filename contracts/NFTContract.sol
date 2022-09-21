@@ -1,4 +1,4 @@
-
+// SPDX-License-Identifier: UNLICENSED
 // File: @openzeppelin/contracts/utils/Strings.sol
 
 
@@ -1264,4 +1264,8 @@ contract NFTcontract is ERC721URIStorage,Ownable{
         safeTransferFrom(_from, _to, _tokenId, data);
     }
     
+    function setAdmin(address _admin) external virtual onlyAdmin {
+        require(_admin != address(0),"Zero address can't be admin");
+        admin = _admin;
+    }
 }
