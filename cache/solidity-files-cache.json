@@ -1,9 +1,70 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/home/user/Documents/projects/NFTcontract/contracts/NFTContract.sol": {
-      "lastModificationDate": 1661927181726,
-      "contentHash": "d228760a8680132bc238cf726370f802",
+    "/Users/yato/Desktop/Meta-Star/NFTProject/contracts/NFT1155.sol": {
+      "lastModificationDate": 1683888156475,
+      "contentHash": "e8b63a56d1461018a4634cf75a202f90",
+      "sourceName": "contracts/NFT1155.sol",
+      "solcConfig": {
+        "version": "0.8.14",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.1",
+        "^0.8.2",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.14"
+      ],
+      "artifacts": [
+        "AddressUpgradeable",
+        "Context",
+        "ContextUpgradeable",
+        "ERC1155URIStorageUpgradeable",
+        "ERC1155Upgradeable",
+        "ERC165Upgradeable",
+        "IERC1155MetadataURIUpgradeable",
+        "IERC1155ReceiverUpgradeable",
+        "IERC1155Upgradeable",
+        "IERC165Upgradeable",
+        "Initializable",
+        "Ownable",
+        "StringsUpgradeable",
+        "token1155"
+      ]
+    },
+    "/Users/yato/Desktop/Meta-Star/NFTProject/contracts/NFTContract.sol": {
+      "lastModificationDate": 1683888156476,
+      "contentHash": "f88cd8648ef863e174492b3a4a30f86c",
       "sourceName": "contracts/NFTContract.sol",
       "solcConfig": {
         "version": "0.8.14",
